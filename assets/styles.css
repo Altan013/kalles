@@ -1,0 +1,680 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#First{
+    padding: 20px 0;
+}
+
+a{
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.slider {
+    background-image: url(https://wp.the4.co/kalles/wp-content/uploads/2021/07/slideshow_image.jpg);
+    padding: 300px;
+    background-repeat: no-repeat;
+}
+
+.slider-text{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+
+.slider-text a{
+    text-decoration: none;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    padding: 12px 40px;
+    background-color: #56cfe100;
+    color: #fff;
+}
+
+#products{
+    padding: 10px 15px 0;
+}
+
+#products .image{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#products .image img{
+    width: 100%;
+    transition: transform .3s;
+}
+
+#products .image:hover img{
+    transform: scale(1.1);
+}
+
+#products .image .tag{
+
+    padding: 10px 20px;
+    text-align: center;
+    color: black;
+    background: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    font-weight: 600;
+}
+
+.text{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+#products .image .content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+#products .image .p{
+    
+}
+
+#products .image .h1{
+    
+}
+
+#products .image .lule{
+    text-decoration: none;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    padding: 12px 40px;
+    background-color: #56cfe100;
+    color: rgb(0, 0, 0);
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+#trending .container .title-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#trending .container .title-text h3 {
+    color: #222222;
+    font-size: 24px;
+    font-weight: 600;
+    position: relative;
+}
+
+#trending .container .title-text h3::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: #000;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 40%;
+}
+
+#trending .container .title-text h3::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: #000;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 40%;
+}
+
+#trending .container .title-text .title {
+    color: #878787;
+    font-size: 14px;
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+}
+
+#trending .container .row .item .image{
+    position: relative;
+    overflow: hidden;
+}
+
+#trending .container .row .item .image .icons{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+#trending .container .row .item .image .icons i{
+    margin-top: 10px;
+    color: white;
+    font-size: 18px;
+}
+
+#trending .container .row .item .image .sale{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #FF4E00;
+    color: white;
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+#trending .container .row .item .image::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.1);
+    transition: opacity .3s;
+    opacity: 0;
+}
+
+#trending .container .row .item .image:hover::before {
+    opacity: 1;
+}
+
+#trending .container .row .item .image:hover .icons{
+    opacity: 1;
+}
+
+#trending .container .row .item .image:hover .buttons{
+    opacity: 1;
+    top: 50%;
+}
+
+
+#trending .container .row .item .image:hover .icons .icon{
+    position: relative;
+}
+
+#trending .container .row .item .image .icons .icon span{
+    position: absolute;
+    transform: translateY(-50%);
+    top: 55%;
+    left: 130%;
+    background: black;
+    color: white;
+    padding: 0 5px;
+    white-space: nowrap;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+#trending .container .row .item .image .icons .icon .animate:hover{
+    animation: rotate 1s .1s infinite;
+}
+
+#trending .container .row .item .image .icons .icon:hover span{
+    opacity: 1;
+}
+
+#trending .container .row .item .image .buttons{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: all .3s;
+    display: flex;
+    flex-direction: column;
+}
+
+#trending .container .row .item .image .buttons a{
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    padding: 10px 0;
+    width: 150px;
+    border-radius: 20px;
+    background: white;
+    color: #000;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color .1s;
+}
+
+#trending .container .row .item:hover .image img {
+    display: none;
+}
+
+#trending .container .row .item:hover .image .image2{
+    display: inline;
+    animation: zoom 2s linear forwards;
+}
+
+#trending .container .row .item .image .buttons a:hover{
+    background-color: #222;
+    color: #fff;
+}
+
+#trending .container .row .item .image .buttons a:hover span{
+    transform: translateY(-50px);
+}
+
+#trending .container .row .item .image .buttons a:hover i{
+    top: 50%;
+}
+
+#trending .container .row .item .image .buttons a span{
+    transition: all .3s;
+    display: inline-block;
+}
+
+#trending .container .row .item .image .buttons a i{
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all .3s;
+}
+
+#trending .container .row .item .image img {
+    width: 100%;
+}
+
+#trending .container .row .item .image .image2 {
+    display: none;
+}
+
+#trending .container .row .item .text {
+    margin-top: 20px;
+}
+
+#trending .container .row .item .text h6 {
+    font-size: 14px;
+    color: #222;
+    margin-bottom: 0.3rem;
+    transition: color .3s;
+    cursor: pointer;
+}
+
+#trending .container .row .item .text p {
+    color: #696969;
+    font-size: 14px;
+}
+
+#trending .container .row .item .text h6:hover{
+    color: #56cfe1;
+}
+
+#trending .container .title-text{
+    margin-top: 3rem;
+}
+
+@keyframes rotate{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes zoom{
+    to{
+        transform: scale(1.1);
+    }
+}
+
+#photos2 .textpro {
+    margin: 50px 0;
+    text-align: center;
+}
+
+#photos2 .container .col-lg-3 .box1 img {
+    width: 100%;
+}
+
+#photos2 .text3 {
+    margin: 15px 0px;
+    color: gray;
+}
+
+#photos2 .iconsstar2 {
+    color: rgb(253, 188, 0);
+}
+
+#photos2 .textpro p {
+    color: gray;
+    font-size: 20px;
+    font-family: libre baskerville, serif;
+    font-weight: 400;
+}
+
+#photos2 .textpro a {
+    text-decoration: none;
+    text-align: center;
+    color: gray;
+    font-size: 20px;
+    margin: 10px;
+    border: 1px dashed black;
+    border-radius: 25px;
+    padding: 10px 20px;
+}
+
+#photos3 .textblog {
+    text-align: center;
+}
+
+#photos3 .boxblog {
+    margin: 20px 0;
+}
+
+#photos3 .boxblog p,
+span {
+    color: gray;
+}
+
+#photos .boxblog img {
+    width: 100%;
+}
+
+#photos3 .boxblog:hover img {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 3s;
+}
+
+#insta .boxinsta img {
+    width: 100%;
+}
+
+#insta .allbox {
+    display: flex;
+}
+
+#insta {
+    padding: 5rem 0;
+}
+
+#insta .instablog {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+#photos2 .container .textpro-text-center a{
+    display: flex;
+    justify-content: space-between;
+}
+
+#photos2 .container .textpro-text-center {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#photos2 .container .textpro-text-center h1 {
+    color: #222222;
+    font-size: 24px;
+    font-weight: 600;
+    position: relative;
+}
+
+#photos2 .container .textpro-text-center h1::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: #000;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 40%;
+}
+
+#photos2 .container .textpro-text-center h1::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: #000;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 40%;
+}
+
+#insta .instablog-text-center {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#insta .instablog-text-center h1 {
+    color: #222222;
+    font-size: 24px;
+    font-weight: 600;
+    position: relative;
+}
+
+#insta .instablog-text-center h1::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: #000;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 40%;
+}
+
+#insta .instablog-text-center h1::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: #000;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 40%;
+}
+#photos3 .container .textblog {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#photos3 .container .textblog  h1 {
+    color: #222222;
+    font-size: 24px;
+    font-weight: 600;
+    position: relative;
+}
+
+#photos3 .container .textblog  h1::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: #000;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 40%;
+}
+
+#photos2 .container .textpro-text-center h1::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: #000;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 40%;
+}
+#last{
+    background-color: #F6F6F8;
+    padding: 6rem 0;
+}
+#last img{
+    width: 40%;
+    margin-bottom: 20px;
+}
+#last p{
+    color: #878787;
+    font-size: 14px;
+    margin-bottom: 10px
+
+}
+#last h3{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+#last i{
+    color: #878787;
+    margin-right: 10px;
+    transition: .1s;
+}
+#last i:hover{
+    color: #01BAD4;
+}
+#last  a{
+    display: block;
+    font-size: 14px;
+    color: #878787;
+    margin-bottom: 10px;
+    transition: .1s;
+}
+#last a:hover{
+    color: #01BAD4;
+}
+#last h6{
+color: #878787;
+margin-left: 20px;
+font-size: 14px;
+font-weight: 0;
+}
+#last .wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#last span{
+    margin-left: 10px;
+}
+#last p{
+    margin-right: 30px;
+}
+#last .icons a{
+    font-size: 30px;
+    display: inline;
+    margin-right: 20px;
+}
+#last button{
+    background-color: #212121;
+    color: #fff;
+}
+footer{
+    background-color: #212121;
+    padding: 12px 0;
+}
+footer p{
+    color: #fff;
+    margin-top: 20px;
+}
+footer a{
+    margin-left: 20px;
+    color: #fff;
+    display: inline-block;
+    margin-top: 20px;
+}
+footer span{
+    color:#54CACF;
+}
+#phone-footer{
+    display: none;
+}
+@media(max-width:576px){
+    .phone{
+        display: none;
+    }
+    header .top img{
+        width: 5%;
+    }
+    #trends .trends-text h3::after{
+    right: 25%;
+}
+
+#trends .trends-text h3::before{
+    left: 25%;
+}
+#ourproducts .product-text h3::after{
+    right: 22%;
+}
+#ourproducts .product-text h3::before{
+    left: 20%;
+}
+#blog .blog-text h3::after{
+    right: 15%;
+}
+#blog .blog-text h3::before{
+    left: 15%;
+}
+#instagram .insta-text h3::after{
+    right: 1%;
+}
+#instagram .insta-text h3::before{
+    left: 3%;
+}
+#intro .intro h3{
+    font-size: 20px;
+}
+
+header .bottom{
+    display: none
+}
+#phone-header{
+    display: block;
+    padding: 6px 0;
+}
+#phone-header .all{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ #phone-header img{
+   width: 15%;
+    height: 20%;
+} 
+#phone-header .icons i{
+    margin-left: 20px;
+}
+#phone-header .cal3{
+    position: relative;
+}
+#phone-header span{
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    border: 1px solid;
+    padding: 1px 7px;
+    border-radius: 50px;
+    background-color: #212121;
+    font-size: 9px;
+    color: #fff;
+}
+#last{
+    display: none;
+}
+#phone-footer{
+    display: block;
+}
+#phone-footer .box{
+    display: flex;
+    justify-content: space-between;
+}
+#phone-footer p{
+  font-weight: bold;
+}
+}
